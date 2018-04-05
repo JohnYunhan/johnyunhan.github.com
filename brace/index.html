@@ -15,11 +15,10 @@
         <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
         <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
         <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
-
     </head>
     <body>
         <div id="main">
-            <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~</div>
+        <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~</div>
             <div id="wrap">
                <div id="text">
                     <div id="code">                 
@@ -28,20 +27,8 @@
                     <span class="say">不敢遵循自己内心真实的想法，</span><br>
                     <span class="say">从现在起，我决定不再犹豫，</span><br>
                      <span class="say">不管未来会发生什么，</span><br>
-                    <span class="say">我只想陪在你身边</span><br>
+                    <span class="say">我只想陪在你身边，</span><br>
                     <span class="say">为你，我愿成为更好的自己！</span><br>
-                    <!-- <span class="say">历经你生命中所有的点点滴滴。</span><br>
-                    <span class="say">我期待这一生与你一起走过，</span><br>
-                    <span class="say">我期待与你慢慢变老</span><br>
-                    <span class="say">等我们老到哪儿也去不了，</span><br>
-                    <span class="say">还能满载着一生的幸福快乐 ！</span><br>
-                    <br>
-                    <span class="say">我会为我们的未来撑起一片天空，</span><br>
-                     <span class="say">为我们的将来担负起一生的责任，</span><br>
-                      <span class="say">愿意为你去做每一件能让你开心快乐的事。</span><br>
-                       <span class="say">所有我们经历的点点滴滴，</span><br>
-                        <span class="say">都是我们一辈子最美的回忆。</span><br>
-                         <span class="say">我愿意爱你直到老去！</span><br> -->
                    <br>
                     <span class="say"><span class="space"></span> -- 云汉</span>
                     </div>
@@ -51,7 +38,6 @@
                         <div id="clock"></div>
                 </div>
                 <canvas id="canvas"></canvas>
-                <!-- <canvas id="canvas" width="1100" height="680"></canvas> -->
             </div>
             <audio src="bgm.mp3" loop id="audio"></audio>
         </div>
@@ -59,13 +45,13 @@
     <script>
     (function(){
         var w = document.body.clientWidth;
-        console.log(122);
         if(w<1000){
         var obj = document.getElementById("wrap");
             obj.style.cssText = "margin-top:40%";
         }
 
         var canvas = $('#canvas');
+        var wrap = $('#wrap');
 
         if (!canvas[0].getContext) {
             $("#error").show();
@@ -120,6 +106,7 @@
         var hold = 1;
 
         canvas.click(function(e) {
+            console.log(e);
             document.getElementById("audio").play();
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
