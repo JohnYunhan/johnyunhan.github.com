@@ -1,4 +1,4 @@
-body{margin:0;padding:0;background:#ffe;font-size:14px;font-family:'微软雅黑','宋体',sans-serif;color:#231F20;overflow:auto}
+body{margin:0;padding:0;background:#FFACFF;font-size:14px;font-family:'微软雅黑','宋体',sans-serif;color:#231F20;overflow:auto}
 a {color:#000;font-size:14px;}
 #main{width:100%;}
 #wrap{position:relative;margin:10px auto 0;width:1100px;height:680px;}
@@ -10,7 +10,7 @@ a {color:#000;font-size:14px;}
 #canvas{margin:0 auto;width:1100px;height:680px;}
 #error{margin:0 auto;text-align:center;margin-top:60px;display:none;}
 .hand{cursor:pointer;}
-.say{display: inline-block;margin:8px 0 8px 5px;}
+.say{display: inline-block;margin:0 0 5px 5px;}
 .space{margin-right:150px;}
 #bgimg{
 	position:fixed;
@@ -19,9 +19,9 @@ a {color:#000;font-size:14px;}
   width:100%;
   height:100%;
   min-width: 1000px;
-  z-index:-10;
+  z-index:-1;
   zoom: 1;
-  background-color: #fff;
+  background-color: #FFACFF;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
