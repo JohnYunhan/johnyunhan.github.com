@@ -19,6 +19,7 @@
     <body>
         <div id="main">
         <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~</div>
+        <div id="bgimg"></div>
             <div id="wrap">
                <div id="text">
                     <div id="code">                 
@@ -47,7 +48,9 @@
         var w = document.body.clientWidth;
         if(w<1000){
         var obj = document.getElementById("wrap");
-            obj.style.cssText = "margin-top:40%";
+        var bgimg = document.getElementById("bgimg");
+            obj.style.cssText = "margin-top:60%";
+            bgimg.style.cssText =  "background-image: url(./Love_files/bgimg.jpg)"; 
         }
 
         var canvas = $('#canvas');
