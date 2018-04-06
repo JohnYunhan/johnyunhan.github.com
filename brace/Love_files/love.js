@@ -12,8 +12,6 @@
     }  
 
     function inheart(x, y, r) {
-        // x^2+(y-(x^2)^(1/3))^2 = 1
-        // http://www.wolframalpha.com/input/?i=x%5E2%2B%28y-%28x%5E2%29%5E%281%2F3%29%29%5E2+%3D+1
         var z = ((x / r) * (x / r) + (y / r) * (y / r) - 1) * ((x / r) * (x / r) + (y / r) * (y / r) - 1) * ((x / r) * (x / r) + (y / r) * (y / r) - 1) - (x / r) * (x / r) * (y / r) * (y / r) * (y / r);
         return z < 0;
     }
@@ -53,9 +51,6 @@
     }
 
     Heart = function() {
-        // x = 16 sin^3 t
-        // y = 13 cos t - 5 cos 2t - 2 cos 3t - cos 4t
-        // http://www.wolframalpha.com/input/?i=x+%3D+16+sin%5E3+t%2C+y+%3D+(13+cos+t+-+5+cos+2t+-+2+cos+3t+-+cos+4t)
         var points = [], x, y, t;
         for (var i = 10; i < 30; i += 0.2) {
             t = i / Math.PI;
@@ -164,18 +159,18 @@
             ctx.scale(scale, scale);
             ctx.moveTo(0, 0);
     	    ctx.lineTo(15, 15);
-    	    ctx.lineTo(100, 15);
+    	    ctx.lineTo(60, 15);
             ctx.stroke();
 
             ctx.moveTo(0, 0);
             ctx.scale(0.75, 0.75);
             ctx.font = "12px 微软雅黑,Verdana"; // 字号肿么没有用? (ˉ(∞)ˉ)
-            ctx.fillText("由心触动，为你而来", 23, 16);
+            ctx.fillText("由心触动", 23, 16);
             ctx.restore();
         },
         clear: function() {
             var ctx = this.tree.ctx, cirle = this.cirle;
-            var point = cirle.point, scale = cirle.scale, radius = 90;
+            var point = cirle.point, scale = cirle.scale, radius = 50;
             var w = h = (radius * scale);
             ctx.clearRect(point.x - w, point.y - h, 4 * w, 4 * h);
         },
