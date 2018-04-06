@@ -89,7 +89,7 @@
             point  : point,
             scale  : scale,
             color  : color,
-            radius : 5,
+            radius : 6,
         }
     }
     Seed.prototype = {
@@ -138,6 +138,7 @@
             ctx.restore();
         },
         drawCirle: function() {
+            document.getElementById("audio").play();
             var ctx = this.tree.ctx, cirle = this.cirle;
             var point = cirle.point, color = cirle.color, 
                 scale = cirle.scale, radius = cirle.radius;
@@ -163,18 +164,18 @@
             ctx.scale(scale, scale);
             ctx.moveTo(0, 0);
     	    ctx.lineTo(15, 15);
-    	    ctx.lineTo(60, 15);
+    	    ctx.lineTo(100, 15);
             ctx.stroke();
 
             ctx.moveTo(0, 0);
             ctx.scale(0.75, 0.75);
             ctx.font = "12px 微软雅黑,Verdana"; // 字号肿么没有用? (ˉ(∞)ˉ)
-            ctx.fillText("由心触动", 23, 16);
+            ctx.fillText("由心触动，为你而来", 23, 16);
             ctx.restore();
         },
         clear: function() {
             var ctx = this.tree.ctx, cirle = this.cirle;
-            var point = cirle.point, scale = cirle.scale, radius = 50;
+            var point = cirle.point, scale = cirle.scale, radius = 90;
             var w = h = (radius * scale);
             ctx.clearRect(point.x - w, point.y - h, 4 * w, 4 * h);
         },
