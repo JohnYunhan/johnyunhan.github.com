@@ -3,7 +3,7 @@ a {color:#000;font-size:14px;}
 #main{width:100%;}
 #wrap{position:relative;margin:0 auto;width:1100px;height:680px;margin-top:10px;}
 #text{width:400px;height:425px;left:60px;top:80px;position:absolute;}
-#code{display:none;font-size:16px;}
+#code{display:none;font-size:22px;}
 #clock-box {position:absolute;left:60px;top:550px;font-size:28px;display:none;}
 #clock-box a {font-size:28px;text-decoration:none;}
 #clock{margin-left:48px;}
@@ -11,10 +11,5 @@ a {color:#000;font-size:14px;}
 #canvas{margin:0 auto;width:1100px;height:680px;}
 #error{margin:0 auto;text-align:center;margin-top:60px;display:none;}
 .hand{cursor:pointer;}
-.say{display: inline-block;margin:8px 0 8px 5px;font-size: 20px;}
+.say{display: inline-block;margin:8px 0 8px 5px;}
 .space{margin-right:150px;}
-/*@media screen and(min-width: 750px)and(max-width: 799px){
-	#wrap{
-		margin-top:40%;
-	}
-}*/
